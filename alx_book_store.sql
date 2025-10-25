@@ -1,10 +1,10 @@
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
 
-CREATE TABLE authors (author_id INT Primary Key,
+CREATE TABLE Authors (author_id INT Primary Key,
 author_name VARCHAR(215));
 
-CREATE TABLE books (book_id INT PRIMARY KEY,
+CREATE TABLE Books (book_id INT PRIMARY KEY,
 title VARCHAR(130),
 author_id INT, 
 FOREIGN KEY (author_id) REFERENCES authors(author_id),
