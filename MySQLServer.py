@@ -44,6 +44,8 @@ def execute_sql_file(host, port, user, password, sql_query):
     # except FileNotFoundError:
     #     print(f"❌ ERROR: SQL file not found at path: {file_path}")
 
+    except mysql.connector.Error as e:
+        print(f"❌ Couldn't connect to database: {e}")
     except Error as err:
         print(f"❌ Database Error: {err}")
         if db_connection and db_connection.is_connected():
